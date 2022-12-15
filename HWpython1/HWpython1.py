@@ -13,26 +13,26 @@
 # Задача 2 - (!!!Доп!!!) Напишите программу для проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 # (0,0,0), (0,0,1) и тд.
 
-# liststr = ['000', '001', '011', '101', '110', '100', '111']
+liststr = ['000', '001', '011', '101', '110', '100', '111']
 
-# def Boolstr(x):
-#     y = bool(int(x))
-#     return y
+def Boolstr(x):
+    y = bool(int(x))
+    return y
 
-# check_for_trueth = True
+check_for_trueth = True
 
-# for i in range(6):
-#     x = Boolstr(liststr[i][0])
-#     y = Boolstr(liststr[i][1])
-#     z = Boolstr(liststr[i][2])
-#     expression = not(x and y and z) == (not(x) or not(y) or not(z))
-#     print(f'Для X:{x} Y:{y} Z:{z} - expression is {expression}')
-#     check_for_trueth *=expression
+for i in range(6):
+    x = Boolstr(liststr[i][0])
+    y = Boolstr(liststr[i][1])
+    z = Boolstr(liststr[i][2])
+    expression = (not(x and y and z) == (not(x) or not(y) or not(z)))
+    print(f'Для X:{x} Y:{y} Z:{z} - expression is {expression}')
+    check_for_trueth *=expression
 
-# if check_for_trueth:
-#     print('Утверждение истинно для всех значений XYZ')
-# else:
-#     print('Утверждение ложно')
+if check_for_trueth:
+    print('Утверждение истинно для всех значений XYZ')
+else:
+    print('Утверждение ложно')
 
 # Задача 3 - Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости,
 # в которой находится эта точка (или на какой оси она находится).
